@@ -1,0 +1,8 @@
+
+<%= render @order %>
+
+<div>
+  <%= link_to "Finalizar pedido", root_path %></br>
+
+  <%= button_to "Cancelar pedido", @order, method: :delete %>
+</div>

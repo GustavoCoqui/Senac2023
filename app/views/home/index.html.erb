@@ -1,0 +1,13 @@
+<div style="text-align:center">
+  <%= image_tag("churrasco.png", :size => "400x300" )%>
+  <h1>Peça seu Churrasco</h1>
+  <% if current_user && current_user.admin %>
+    <%= link_to "Pedidos dos clientes", orders_path %>
+  <%else%>
+    <%= link_to "Novo pedido", new_order_path %>
+  <%end%>
+  <% if user_signed_in? %>
+    <%= button_to "Sair" , destroy_user_session_path, method: :delete %>
+  <%else%>
+    <%= link_to "Entrar" , new_user_session_path %>
+  <%end%>

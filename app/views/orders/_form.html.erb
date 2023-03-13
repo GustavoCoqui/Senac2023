@@ -1,0 +1,149 @@
+<div style="text-align:center">
+
+<%= form_with(model: order) do |form| %>
+  <% if order.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div>
+    <%= form.label :pao_de_alho, style: "display: block" %>
+    <%= form.text_field :pao_de_alho %>
+  </div>
+<br>
+
+  <div>
+    <%= form.label :linguiça_fina_kg, style: "display: block" %>
+    <%= form.text_field :linguica_fina %>
+  </div>
+<br>
+  <div>
+    <%= form.label :linguiça_grossa_kg, style: "display: block" %>
+    <%= form.text_field :liguica_groca %>
+  </div>
+<br>
+  <div>
+    <%= form.label :queijo_un, style: "display: block" %>
+    <%= form.text_field :queijo %>
+  </div>
+<br>
+  <div>
+    <%= form.label :frango_kg, style: "display: block" %>
+    <%= form.text_field :frango %>
+  </div>
+<br>
+  <div>
+    <%= form.label :porco_kg, style: "display: block" %>
+    <%= form.text_field :porco %>
+  </div>
+<br>
+  <div>
+    <%= form.label :costela_de_ovelha_kg, style: "display: block" %>
+    <%= form.text_field :costela_de_ovelha %>
+  </div>
+<br>
+  <div>
+    <%= form.label :paleta_de_ovelha_kg, style: "display: block" %>
+    <%= form.text_field :paleta_de_ovelha %>
+  </div>
+<br>
+  <div>
+    <%= form.label :picanha_kg, style: "display: block" %>
+    <%= form.text_field :picanha %>
+  </div>
+<br>
+  <div>
+    <%= form.label :file_mignion_kg, style: "display: block" %>
+    <%= form.text_field :file_mignion %>
+  </div>
+<br>
+  <div>
+    <%= form.label :maminha_kg, style: "display: block" %>
+    <%= form.text_field :maminha %>
+  </div>
+<br>
+  <div>
+    <%= form.label :entrecort_kg, style: "display: block" %>
+    <%= form.text_field :entrecort %>
+  </div>
+<br>
+  <div>
+    <%= form.label :costela_kg, style: "display: block" %>
+    <%= form.text_field :costela %>
+  </div>
+<br>
+  <div>
+    <%= form.label :vazio_kg, style: "display: block" %>
+    <%= form.text_field :vazio %>
+  </div>
+<br>
+  <div>
+    <%= form.label :alcatra_kg, style: "display: block" %>
+    <%= form.text_field :alcatra %>
+  </div>
+<br>
+  <div>
+    <%= form.label :capa_de_file_kg, style: "display: block" %>
+    <%= form.text_field :capa_de_file %>
+  </div>
+<br>
+  <div>
+    <%= form.label :sorvete_un, style: "display: block" %>
+    <%= form.text_field :sorvete %>
+  </div>
+<br>
+  <div>
+    <%= form.label :chocolate_barra_un, style: "display: block" %>
+    <%= form.text_field :chocolate_barra %>
+  </div>
+<br>
+  <div>
+    <%= form.label :bombom_un, style: "display: block" %>
+    <%= form.text_field :bombom %>
+  </div>
+<br>
+  <div>
+    <%= form.label :cerveja_lata_un, style: "display: block" %>
+    <%= form.text_field :ceveja_lata %>
+<br>
+  <div>
+    <%= form.label :refrigerante_un, style: "display: block" %>
+    <%= form.text_field :refrigerante %>
+  </div>
+<br>
+  <div>
+    <%= form.label :agua_sem_gas_un, style: "display: block" %>
+    <%= form.text_field :agua_sem_gas %>
+  </div>
+<br>
+  <div>
+    <%= form.label :agua_com_gas_un, style: "display: block" %>
+    <%= form.text_field :agua_com_gas %>
+  </div>
+<br>
+  <div>
+    <%= form.label :espumante_un, style: "display: block" %>
+    <%= form.text_field :espumante %>
+  </div>
+<br>
+  <div>
+    <%= form.label :Endereço_de_entrega, style: "display: block" %>
+    <%= form.text_area :entrega %>
+  </div>
+
+  <div>
+    <%= form.select :pagamento, ['Pix', 'Cartao', 'Especie']%>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

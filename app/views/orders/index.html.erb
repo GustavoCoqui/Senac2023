@@ -1,0 +1,18 @@
+
+<% if current_user && current_user.admin %>
+
+<h1>Lista de Pedidos</h1>
+<div id="orders">
+  <% @orders.each do |order| %>
+    <p>
+      <%= link_to "Mostrar detalhes do pedido", order %> | <%= link_to "Página inicial", root_path %>
+    </p>
+    <%= render order %></br>
+  <% end %>
+</div>
+
+<%else %>
+
+<p> Apenas o administrador tem acesso a essa página</p>
+
+<% end %>
