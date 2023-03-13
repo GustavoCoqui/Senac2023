@@ -5,7 +5,7 @@
 Ruby 3.2.0
 Sqlite3 3.41
 
-* Com esses programas instalados, deve-se entrar na pasta barbecue (onde estão os arquivos do programa) e digitar o seguinte comando no terminal:
+* Com esses programas instalados, deve-se entrar na pasta onde estão os arquivos do programa foram salvos e digitar o seguinte comando no terminal:
 
 bundle install
 
